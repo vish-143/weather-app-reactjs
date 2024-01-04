@@ -11,7 +11,6 @@ const NextWeather = ({ data }) => {
   const location = useContext(UserContext);
   const date = data.dt_txt.split(' ');
   const arr = date[1].split(':');
-  console.log(arr);
   let current_time = '';
   let timeZone = 'AM';
   if (+arr[0] > 12) {

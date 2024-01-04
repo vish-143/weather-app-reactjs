@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './error.scss';
+import { UserContext } from '../../App';
 
 const ErrorPage = () => {
+    const location = useContext(UserContext);
+    location.setSetting((e) => ({
+        ...e,
+        loct: 'err'
+    }))
     return (
         <>
             <div className="error-main">
@@ -13,11 +19,10 @@ const ErrorPage = () => {
                                     <div className="four_zero_four_bg">
                                     </div>
                                     <div className="contant_box_404">
-                                        <h3 className="h2">
+                                        <h3 style={{ color: 'red' }} className="h2">
                                             Look like you're location is not available...!
                                         </h3>
-                                        <h4 style={{backgroundColor:'gray'}}>Enter Correct Location</h4>
-                                        
+                                        <h4 style={{ color: 'red' }}>Enter Correct Location ✌️</h4>
                                     </div>
                                 </div>
                             </div>

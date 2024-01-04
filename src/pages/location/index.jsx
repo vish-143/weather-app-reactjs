@@ -12,8 +12,10 @@ import { UserContext } from '../../App'
 
 import axios from "axios";
 
-import './location.scss';
 import Home from '../home';
+import MapComp from '../../components/map/mapcomp';
+
+import './location.scss';
 
 const Location = () => {
   const location = useContext(UserContext);
@@ -25,7 +27,6 @@ const Location = () => {
   const currentHour = new Date().getHours();
 
   const getNext24hourForecast = (data) => {
-    console.log(data);
     const filterd = data.filter((e) => {
       return ((+(e.dt_txt.split(' ')[0].split('-')[2]) > currentDate) || (+(e.dt_txt.split(' ')[1].split(':')[0]) > currentHour))
     })
@@ -64,9 +65,16 @@ const Location = () => {
         err && weather && forecast ?
           <>
             <div className={`weather-main ${location.setting.theme} theme-${location.setting.icon}`}>
-              <LocationWeather data={weather} />
-              <WeatherMid data={weather.weather} />
-              <WeatherDetails data={weather} />
+              <div className="weather-1">
+                <LocationWeather data={weather} />
+                <WeatherMid data={weather.weather} />
+              </div>
+
+              <div className="weather-2">
+                <MapComp data={weather.coord} />
+                <WeatherDetails data={weather} />
+              </div>
+
             </div>
             <div className="next-weathers">
               <div className="next-p">
@@ -79,6 +87,7 @@ const Location = () => {
                   })
                 }
               </div>
+
             </div>
           </>
           : err ? <Home /> : <ErrorPage />
