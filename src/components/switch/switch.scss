@@ -1,0 +1,19 @@
+@use '../../app.scss';
+
+// $primary:red;
+// $secondary: green;
+// $body-bg: white;
+
+
+
+// $form-check-input-bg:app.$primary;
+.form-check-input{
+    height: 20px !important;
+    width: 40px !important;
+}
+
+.form-check-input:checked{
+    background-color: black !important;
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem  ;
+    .leftnav {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin: 1rem;
+        }
+    }
+
+    .rightnav {
+        display: flex;
+        width: 7%;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .nav {
+        .rightnav {
+            width: 20%;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .nav {
+        flex-wrap: wrap;
+        .rightnav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+}

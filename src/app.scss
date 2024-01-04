@@ -1,0 +1,32 @@
+// $primary:black;
+$primary: rgb(194, 243, 1);
+$body-bg: white;
+// $theme-colors: $primary;
+// $text-color:white;
+
+.App {
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: rgb(65, 64, 64) !important;
+
+  p {
+    color: white;
+  }
+}
+
+.light {
+  background-color: white !important;
+
+  p {
+    color: black;
+  }
+}
+
+i {
+  color: $primary;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

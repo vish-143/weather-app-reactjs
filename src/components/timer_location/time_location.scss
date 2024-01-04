@@ -1,0 +1,60 @@
+.time_location {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .timerDiv {
+        p {
+            margin: 0;
+        }
+
+        font-size: 1.7rem;
+    }
+
+    .searchbox {
+        width: 20%;
+        display: flex;
+        align-items: center;
+
+        input {
+            border: none;
+            font-size: 18px;
+        }
+        input[type=text]:active {
+            border: 0px solid #555;
+        }
+
+        i {
+            font-size: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        border-bottom: 1px solid black;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .time_location {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchbox {
+        margin-top: 1rem;
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .searchbox {
+        margin-top: 1rem;
+        width: 90% !important;
+    }
+    .timerDiv {
+        font-size: 1rem !important;
+        font-weight: bold;
+    }
+}

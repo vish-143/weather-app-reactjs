@@ -1,0 +1,139 @@
+@use '../../app.scss';
+
+.location-main {
+    p {
+        margin: 0;
+    }
+
+    .weather-main {
+        width: 80%;
+        margin: auto;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+            font-size: 30px;
+            font-weight: bold;
+            // color: app.$primary;
+            margin-right: 10px;
+        }
+    }
+
+    .next-weathers {
+        width: 95%;
+        margin: auto;
+
+        .next-p {
+            margin-top: 1rem;
+
+            p {
+                margin: auto;
+                font-size: 25px;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+    }
+
+}
+
+.theme-pink {
+    background-color: pink;
+
+    i {
+        color: pink;
+    }
+}
+
+.theme-text-pink {
+    p {
+        color: pink;
+    }
+}
+
+.theme-red {
+    background-color: red;
+
+    i {
+        color: red;
+    }
+}
+
+.theme-text-red {
+    p {
+        color: red;
+    }
+}
+
+.theme-yellow {
+    background-color: rgb(255, 213, 0);
+
+    i {
+        color: rgb(255, 213, 0);
+    }
+}
+
+.theme-text-yellow {
+    p {
+        color: rgb(255, 213, 0);
+    }
+}
+
+.theme-skyblue {
+    background-color: skyblue;
+
+    i {
+        color: skyblue;
+    }
+}
+
+.theme-text-skyblue {
+    p {
+        color: skyblue;
+    }
+}
+
+.theme-green {
+    background-color: green;
+
+    i {
+        color: green;
+    }
+}
+
+.theme-text-green {
+    p {
+        color: green;
+    }
+}
+
+.wronglocation {
+    font-size: 3rem;
+    text-align: center;
+    color: red;
+}
+
+.weather-cards {
+    margin-top: 1rem
+}
+
+// @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@media only screen and (max-width: 1100px) {
+    .location-main {
+        .weather-main {
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .location-main {
+        .weather-main {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
