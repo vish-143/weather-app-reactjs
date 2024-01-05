@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem  ;
+    padding: 1rem 2rem ;
     .leftnav {
         display: flex;
         align-items: center;
@@ -32,6 +32,11 @@
 @media only screen and (max-width: 400px) {
     .nav {
         flex-wrap: wrap;
+        padding: 1rem 0;
+        .leftnav {
+            width: 100%;
+            justify-content: space-between;
+        }
         .rightnav {
             display: flex;
             justify-content: space-around;

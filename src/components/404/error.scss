@@ -1,5 +1,4 @@
 .error-main {
-    // height: 100vh;
     display: flex;
 }
 
@@ -10,21 +9,22 @@
 
 
 .page_404 {
-    height: 50vh;
+    height: 31rem;
     margin: auto;
-    text-align: center;
-    width: 50%;
-    padding: 40px 0;
     background: #fff;
     font-family: 'Arvo', serif;
+    margin-top: 1rem;
 }
 
 .page_404 img {
     width: 100%;
 }
 
-.four_zero_four_bg {
+.center-div{
+    margin: auto;
+}
 
+.four_zero_four_bg {
     background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
     height: 400px;
     background-position: center;

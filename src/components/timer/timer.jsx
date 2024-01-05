@@ -8,9 +8,9 @@ const Timer = () => {
   const [shift, setShift] = useState('');
   useEffect(() => {
     setHour(current_time.getHours());
-    if (hour >= 6 && hour <= 12) setShift('Good Morning')
-    else if (hour >= 12 && hour <= 18) setShift('Good Afternoon')
-    else if (hour > 18 && hour < 24) setShift('Good Evening')
+    if (hour >= 6 && hour < 12) setShift('Good Morning')
+    else if (hour >= 12 && hour < 18) setShift('Good Afternoon')
+    else if (hour >= 18 && hour < 24) setShift('Good Evening')
     else setShift('Good Night')
     const runTime = setInterval(() => {
       if (sec < 59) setSec(current_time.getSeconds() + 1);

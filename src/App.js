@@ -1,12 +1,12 @@
 import React, { useState, createContext } from "react";
 
-import Nav from './components/nav';
 import TimeLocation from './components/timer_location/timelocation';
-
-import './app.scss'
+import Nav from './components/nav';
 import Location from './pages/location';
 import Home from "./pages/home";
 import ErrorPage from "./components/404/error";
+
+import './app.scss'
 
 export const UserContext = createContext()
 

@@ -1,13 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './error.scss';
-import { UserContext } from '../../App';
 
 const ErrorPage = () => {
-    const location = useContext(UserContext);
-    location.setSetting((e) => ({
-        ...e,
-        loct: 'err'
-    }))
+
     return (
         <>
             <div className="error-main">
@@ -15,7 +10,7 @@ const ErrorPage = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 ">
-                                <div className="col-sm-10 col-sm-offset-1  text-center">
+                                <div className="col-sm-10 col-sm-offset-1 text-center center-div">
                                     <div className="four_zero_four_bg">
                                     </div>
                                     <div className="contant_box_404">
